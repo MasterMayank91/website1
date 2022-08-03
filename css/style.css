@@ -1,0 +1,432 @@
+/* 
+*   Programmer = Desginer = Mayank
+*   css/style.css
+*   Website 1 "School"
+*/
+@import "title.css";
+@import "about.css";
+/*
+    import ---------------------------------------------------
+*/
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'calibri','Gabriola','script mt';
+    text-decoration: none;
+    color:#000;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+:root
+{
+    --black:#142536;
+    --dark:#000;
+    --white:white;
+    --light:#eee;
+    --clr1:khaki;
+    --clr2:wheat;
+    --gold:goldenrod;
+    --red:#dd1226;
+    --bg1:linear-gradient(to left, var(--black), var(--dark));
+    --bg2:rgba(0,0,0,0.8);
+    --bg3:rgba(0,0,0,0.5);
+    --nw:300PX;
+}
+body
+{
+    overflow-y: hidden;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+/*
+    HEADER CSS ------------------------------------------------
+*/
+#header
+{
+    margin:0;
+    width: var(--nw);
+    height: auto;
+    background:var(--black);
+}
+#close_btn
+{
+    position:fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    color:var(--white);
+    background:var(--bg3);
+    text-align: center;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+}
+#close_btn:hover
+{
+    background-color: var(--red);
+}
+#logo
+{
+    padding: 1rem 30%;
+    color: var(--clr1);
+    background:var(--dark);
+}
+#aside
+{
+    transition: left linear 0.5s;
+    position:fixed;
+    z-index: 5;
+    /* top: 0; */
+    left: -150vw;
+    background: var(--black);
+    width: var(--nw);
+    height: 100vh;
+    display:flex;
+    flex-flow: column nowrap;
+}
+#aside a
+{
+    width: auto;
+    display: inline-block;
+    font-size: 18px;
+    color:var(--clr2);
+    padding: 1rem 0 1rem 3rem;
+    border:1px inset transparent;
+}
+#aside :hover
+{
+    color:var(--clr1);
+    background: var(--bg1);
+    border-color: var(--gold);
+}
+/*
+    MAIN CSS ------------------------------------------------
+*/
+main
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh auto auto auto auto;
+}
+::-webkit-scrollbar
+{
+    background: transparent;
+    width: 0.5rem;
+}
+::-webkit-scrollbar-thumb
+{
+    background: var(--black);
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background: var(--clr1);
+}
+/*
+    HOME CSS ------------------------------------------------
+*/
+#home
+{
+    background: var(--bg2) url('../pic/college.jpg') fixed no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    clip-path: polygon(0%0%,0%75%,50%100%,100%75%,100%0%);
+}
+.center_frame
+{
+    /* background: #000; */
+    margin:auto;
+    padding: 1rem;
+    width: 50%;
+    color: var(--white);
+    text-align: center;
+}
+#symbol
+{
+    padding: 1rem;
+    margin: 5vh;
+    width: 10vw;
+    height: auto;
+    object-fit: cover;
+    background: var(--white);
+}
+h1
+{
+    margin: 1rem auto;
+    color:var(--white);
+}
+h5
+{
+    padding: 2rem;
+    font: 20px 'Gabriola';
+    font-weight: normal;
+    color: var(--light);
+}
+h5::before, h5::after
+{
+    content:'"';
+    font-size: 3vw;
+}
+.btn_group
+{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn
+{
+    padding: 1rem 3rem ;
+    font-size: 18px;
+    color:var(--white);
+    border:2px inset var(--white);
+}
+.btn:hover
+{
+    transition: all linear 0.5s;
+    background: var(--bg2);
+    border-style: none;
+    border-radius:2rem;
+}
+/*
+    CORSES CSS ------------------------------------------------
+*/
+#corse
+{
+    min-height: 100vh;
+}
+#subject
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.study
+{
+    padding:1rem;
+    margin: 1rem 3rem;
+    width: 200px;
+    height: 250px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.study:hover
+{
+    box-shadow: 2px 3px 5px var(--black);
+}
+.study img
+{
+    width: 100px;
+    height: 100px;
+}
+.study h4
+{
+    font-size: 18px;
+}
+.study h6
+{
+    color: var(--black);
+    font-size: 16px;
+}
+/*
+    CLASS CSS ------------------------------------------------
+*/
+#class
+{
+    height:auto;
+}
+#room
+{
+    margin: 5rem auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap-reverse;
+    position: relative;
+}
+#room ul
+{
+    width: 45%;
+    list-style: none;
+    padding: 1rem;
+    border:1px solid var(--dark);
+    border-radius: 5px;
+    background: var(--black);
+    clip-path:polygon(0%0%,0%100%,80%100%,100%0%);
+}
+#room ul li
+{
+    color: var(--clr2);
+    font-size: 18px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+}
+#room ul li:nth-child(5)
+{
+    border:1px solid var(--light) ;
+}
+#room #picture
+{
+    width: 50%;
+    height: auto;
+    clip-path:polygon(20%0%,0%100%,100%100%,100%0%);
+}
+/*
+    FACILITY CSS ------------------------------------------------
+*/
+#facility
+{
+    min-height: 100vh;
+}
+h2
+{
+    text-align: center;
+    padding: 3rem;
+}
+.service
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+.serve
+{
+    margin: 3rem auto;
+    width: 300px;
+    border-bottom: 1px solid var(--black);
+}
+.serve:hover
+{
+    box-shadow: 2px 2px 5px var(--black);
+}
+.serve > img
+{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    clip-path: polygon(0%0%,100%0%,100%85%,0%100%);
+}
+h3
+{
+    padding: 1rem 2rem;
+    text-align: right;
+    font-family:'calibri';
+    border-right: 2rem solid var(--black);
+}
+p
+{
+    padding: 1rem;
+    font: 18px 'gabriola';
+    /* letter-spacing: 1px; */
+    word-spacing: 3px;
+    color: var(--black);
+}
+/*
+    FOOTER CSS ------------------------------------------------
+*/
+#footer
+{
+    display: grid;
+}
+#nav
+{
+    padding: 1rem;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap-reverse;
+}
+.nav_item
+{
+    margin: 3rem 2rem;
+    width: 300px;
+    min-height: 500px;
+    /* border: 1px solid goldenrod; */
+}
+.nav_item h4
+{
+    padding: 1rem;
+    color: var(--clr1);
+    font-size:20px;
+    font-weight: normal;
+}
+.nav_item a
+{
+    display: inline-block;
+    padding: 1rem;
+    width: 100%;
+    color:var(--light);
+    font-size: 16px;
+}
+.nav_item a:hover
+{
+    background: var(--dark);
+}
+#news
+{
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px var(--dark);
+}
+#news h2
+{
+    height:25px;
+    padding: 0.5rem;
+    height: 10%;
+    color: var(--dark);
+}
+#update
+{
+    height: 475px;
+    overflow-y: scroll;
+}
+/* #update::-webkit-scrollbar
+{
+    background: transparent;
+    width: 5px;
+}
+#update::-webkit-scrollbar-thumb
+{
+    background: var(--black);
+} */
+#update > li
+{
+    padding: 0.5rem auto;
+    list-style: none;
+    border-top: 0.2px dotted var(--dark);
+}
+#update > li:hover
+{
+    background: var(--light);
+}
+#update a
+{
+    padding: 0.5rem;
+    color: var(--black);
+}
+#update a:hover
+{
+    background: transparent;
+}
+.time
+{
+    padding: 0.5rem;
+    color: var(--red);
+    text-align: right;
+}
+.copy
+{
+    text-align: center;
+    line-height: 10vh;
+    color:var(--white);
+    background: var(--dark);
+}

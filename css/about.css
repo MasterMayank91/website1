@@ -1,0 +1,154 @@
+/* 
+*   Programmer = Desginer = Mayank
+*   css/about.css
+*   Website 1 "School"
+*/
+
+#about
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30vh auto auto;
+}
+/*
+    CONTACT CSS -------------------------------------
+*/
+#contact_us
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow:row  wrap-reverse;
+}
+#social
+{
+    width: 50%;
+    padding:3rem;
+}
+#social .media
+{
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    font: 2rem;
+    color: var(--black);
+    border-right: 5px inset var(--black);
+}
+#social .media:hover
+{
+    color: var(--red);
+    border-color: var(--clr1);
+}
+#social .media::first-letter
+{
+    font-size: 1.5rem;
+}
+#social .media a
+{
+    display: inline-block;
+    color:var(--black);
+}
+#social .media:last-child
+{
+    display:flex;
+    justify-content: space-between;
+}
+#social .media:last-child a .scl_icon
+{
+    width: 50px;
+    height: auto;
+    object-fit: cover;
+    border:5px inset var(--black);
+    border-radius: 3rem;
+}
+#social .media:last-child a .scl_icon:hover
+{
+    border-style: outset;
+    transition: all linear 0.5s;
+    border-radius: 0;
+}
+/*
+    MESSAGE FORM CSS ------------------------------
+*/
+#message
+{
+    width: 50%;
+}
+#message form
+{
+    margin: 3rem auto;
+    padding: 1rem;
+    width: 400px;
+    height: 600px;
+    display: grid;
+    grid-gap:1rem;
+    grid-template-rows: 1fr 1fr 1fr 5fr 1fr;
+    background: var(--white);
+    box-shadow: 3px 3px 10px var(--black);
+}
+.fld
+{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 18px;
+    color:var(--dark);
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px var(--bg3);
+}
+.submit_btn
+{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 18px;
+    color:var(--white);
+    background: var(--black);
+}
+.submit_btn:hover
+{
+    color:var(--clr1);
+    background: var(--dark);
+}
+/*
+    TESTROMONIAL CSS -----------------------------------
+*/
+#student
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+blockquote
+{
+    margin: 2rem auto;
+    width: 500px;
+    background: var(--light);
+    text-align: center;
+    border-radius: 10px;
+}
+blockquote:hover
+{
+    box-shadow: 2px 5px 10px var(--black);
+}
+blockquote p
+{
+    margin: 1rem;
+    color: var(--dark);
+}
+blockquote p::after, p::before
+{
+    color: var(--dark);
+    content: '"';
+    font-size: 2rem;
+}
+blockquote b
+{
+    color: var(--dark);
+}
+blockquote .rate
+{
+    padding: 1rem;
+    color: var(--gold);
+    font-size: 2rem;
+}

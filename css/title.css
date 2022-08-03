@@ -1,0 +1,44 @@
+/* 
+*   Programmer = Desginer = Mayank
+*   css/title.css
+*   Website 1 "School"
+*/
+
+/*
+    TITLE CSS --------------------------------------
+    comman header of all file index.html
+*/
+#title
+{
+    padding: 3rem;
+    background: var(--bg2) url('../pic/book.jpg') repeat-x;
+    background-size: 100% 100%;
+    background-blend-mode:color-burn;
+    clip-path: polygon(0%0%,0%85%,50%100%,100%85%,100%0%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#title h6
+{
+    color: var(--white);
+    font-size: 5vw;
+}
+#back_btn
+{
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--white);
+    border: 2px outset var(--light);
+    border-radius: 50%;
+}
+#back_btn:hover
+{
+    transition: all linear 0.5s;
+    transform: rotate(360deg);
+    border-style: inset;
+    color: var(--red);
+}
